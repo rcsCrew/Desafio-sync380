@@ -10,7 +10,8 @@ OK - Quando o usuário preencher e enviar o formulário, as informações atuali
 OK - A página deve ser responsiva e ter uma aparência agradável em dispositivos móveis e desktops.
 
 DESKTOP:
-![imagem_2024-05-09_154703156](https://github.com/rcsCrew/Desafio-sync380/assets/51542841/cc70e950-ddaf-4e9b-857f-530ef8d60b27)
+![image](https://github.com/rcsCrew/Desafio-sync380/assets/51542841/fb6d61aa-6d85-4e22-bd23-9318857910e3)
+
 
 MOBILE: 
 ![image](https://github.com/rcsCrew/Desafio-sync380/assets/51542841/188e877a-64a2-4219-86b1-48794f82e213)
