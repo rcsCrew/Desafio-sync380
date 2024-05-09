@@ -1,0 +1,55 @@
+<section id="inserir"> <!-- inserir dados -->
+
+  <div class="container-area1"> <!-- area left-->
+    <div class="title">
+      <p>INSERIR</p>
+    </div>
+    <form id="form" #userForm="ngForm" (submit)="onSubmit()"> <!-- Busca o script dentro do hub.components.ts-->
+      <!-- usuario -->
+      <label for="nome">USUARIO:</label>
+      <input class="input" type="text" id="nome" name="nome" placeholder="Usuario" required minlength="3" [(ngModel)]="nome">
+      <!-- IDADE -->
+      <label for="idade">IDADE:</label>
+      <input class="input" type="number" id="idade" name="idade" placeholder="Idade" required [(ngModel)]="idade">
+      <!-- RUA -->
+      <label for="endereco-rua">RUA:</label>
+      <input class="input" type="text" id="endereco-rua" name="endereco-rua" placeholder="Rua Joaquin" required minlength="5" [(ngModel)]="enderecoRua">
+      <!-- BAIRRO -->
+      <label for="endereco-bairro">BAIRRO:</label>
+      <input class="input" type="text" id="endereco-bairro" name="endereco-bairro" placeholder="Joana" required minlength="5" [(ngModel)]="enderecoBairro">
+      <!-- ESTADO -->
+      <label for="endereco-estado">ESTADO:</label>
+      <input class="input" type="text" id="endereco-estado" name="endereco-estado" placeholder="SP" required minlength="2" [(ngModel)]="enderecoEstado">
+      <!-- BIOGRAFIA -->
+      <label for="biografia">Biografia:</label>
+      <textarea id="biografia" name="biografia" rows="4" required [(ngModel)]="biografia"></textarea>
+      <!-- BUTTON-->
+      <button type="submit">Atualizar</button>
+    </form>
+  </div>
+</section>
+
+<section class="table"> <!-- TABELA -->
+  <table id="dataTable"> <!-- dataTable - APENAS CLASSE STYLE - nada de script nela!-->
+    <thead>
+      <tr> <!-- COLUM TITLE -->
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Rua</th>
+        <th>Bairro</th>
+        <th>Estado</th>
+        <th>Biografia</th>
+      </tr>
+    </thead>
+    <tbody> <!-- informacoes passada pela area left-->
+      <tr *ngFor="let user of users">
+        <td>{{ user.nome }}</td>
+        <td>{{ user.idade }}</td>
+        <td>{{ user.enderecoRua }}</td>
+        <td>{{ user.enderecoBairro }}</td>
+        <td>{{ user.enderecoEstado }}</td>
+        <td>{{ user.biografia }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
